@@ -7,16 +7,16 @@ const routes = [
     name: "stocks",
     component: () => import("./components/StocksList"),
   },
-  {
-    path: "/stocks/:id",
-    name: "stock-details",
-    component: () => import("./components/Stock"),
-  },
-  {
-    path: "/add",
-    name: "add",
-    component: () => import("./components/AddStock"),
-  },
+  // {
+  //   path: "/stocks/:id",
+  //   name: "stock-details",
+  //   component: () => import("./components/Stock"),
+  // },
+  // {
+  //   path: "/add",
+  //   name: "add",
+  //   component: () => import("./components/AddStock"),
+  // },
 ];
 
 const router = createRouter({
