@@ -18,23 +18,9 @@
             Search
           </button>
         </div>
-        <!-- <Dropdown
-          :options="[
-            { id: 1, name: 'Option 1' },
-            { id: 2, name: 'Option 2' },
-          ]"
-          v-on:selected="validateSelection"
-          v-on:filter="getDropdownValues"
-          :disabled="false"
-          name="zipcode"
-          :maxItem="10"
-          placeholder="Please select an option"
-        >
-        </Dropdown> -->
       </div>
     </div>
     <div class="col-md-6" v-if="this.showFilteredStocks">
-      <!-- <h4>Stocks List</h4> -->
       <ul class="list-group">
         <li
           class="list-group-item"
@@ -46,10 +32,6 @@
           {{ stock.ticker + " - " + stock.name }}
         </li>
       </ul>
-
-      <!-- <button class="m-3 btn btn-danger btn-outline" @click="reset">
-        Reset
-      </button> -->
     </div>
     <div class="col-md-6">
       <div v-if="currentStock">
@@ -76,15 +58,7 @@
           <label><strong>PE Ratio:</strong></label>
           {{ currentStock.peRatio.toFixed(2) }}
         </div>
-
-        <!-- <router-link :to="'' + currentStock.id" class="badge badge-warning"
-          >Edit</router-link
-        > -->
       </div>
-      <!-- <div v-else>
-        <br />
-        <p>Please click on a Stock...</p>
-      </div> -->
     </div>
   </div>
 </template>
@@ -116,24 +90,6 @@ export default {
     },
   },
   methods: {
-    // retrieveStocks() {
-    //   console.log("Inside retrieve stocks");
-    //   StockDataService.getAll()
-    //     .then((response) => {
-    //       this.stocks = response.data;
-    //       console.log(response);
-    //     })
-    //     .catch((e) => {
-    //       console.log(e);
-    //     });
-    // },
-
-    refreshList() {
-      // this.retrieveStocks();
-      this.currentStock = null;
-      this.currentIndex = -1;
-    },
-
     setActiveStock(stock, index) {
       this.currentStock = stock;
       this.currentIndex = stock ? index : -1;
@@ -143,17 +99,6 @@ export default {
       this.title = "";
       this.showFilteredStocks = false;
       this.currentStock = null;
-    },
-
-    removeAllStocks() {
-      StockDataService.deleteAll()
-        .then((response) => {
-          console.log(response.data);
-          this.refreshList();
-        })
-        .catch((e) => {
-          console.log(e);
-        });
     },
 
     searchTitle() {
@@ -171,9 +116,6 @@ export default {
           console.log(e);
         });
     },
-  },
-  mounted() {
-    // this.retrieveStocks();
   },
 };
 </script>
