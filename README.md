@@ -1,5 +1,5 @@
 ﻿# StockSearch - FrontEnd 
- ![Alt Text](https://im3.ezgif.com/tmp/ezgif-3-1f77dc4ad0.gif)
+ ![Alt Text](https://media1.giphy.com/media/YYisQIhxxlqm4NfRJM/giphy.gif?cid=790b7611a325b6b2089d8ef60440a3b542bbb99c925cb92c&rid=giphy.gif)
  
  Tech Stack Used: VueJs, HTML, CSS, Javascript, BootStrap
  
